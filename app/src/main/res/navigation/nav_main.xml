@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/news">
+
+    <fragment
+        android:id="@+id/news"
+        android:name="com.example.nolife.News"
+        android:label="Новости"
+        tools:layout="@layout/fragment_news">
+        <action
+            android:id="@+id/action_news_to_article"
+            app:destination="@id/article" />
+    </fragment>
+    <fragment
+        android:id="@+id/article"
+        android:name="com.example.nolife.ArticleFragment"
+        android:label="Статья"
+        tools:layout="@layout/fragment_article">
+    </fragment>
+    <fragment
+        android:id="@+id/profile"
+        android:name="com.example.nolife.Profile"
+        android:label="Профиль"
+        tools:layout="@layout/fragment_profile">
+    </fragment>
+    <fragment
+        android:id="@+id/favourites"
+        android:name="com.example.nolife.Favourites"
+        android:label="Закладки"
+        tools:layout="@layout/fragment_favourites">
+        <action
+            android:id="@+id/action_favourites_to_article2"
+            app:destination="@id/article" />
+    </fragment>
+
+</navigation>
