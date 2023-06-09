@@ -98,7 +98,6 @@ public class News extends Fragment {
         
     }
     public void get_news_from_api(){
-        //https://newsapi.org/v2/everything?q=(%22трейлер%22OR%22консоль%22)AND%22игры%22&apiKey=da26206921d84674a111590b3c1e8409
         AndroidNetworking.get("https://newsapi.org/v2/everything")
                 .addQueryParameter("q","\"dota\"OR\"геймплей\"OR\"Warhammer\"OR\"Alan\"OR\"Steam\"")
                 .addQueryParameter("excludeDomains","google.com,3dnews.ru,lenta.ru")
